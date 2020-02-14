@@ -51,3 +51,19 @@ startTimer();
 function onTimesUp() {
     clearInterval(timerInterval);
 }
+
+function startTimer() {
+    timerInterval = setInterval(() => {
+        timePassed = timePassed += 1;
+        timeLeft = TIME_LIMIT - timePassed;
+        document.getElementById("base-timer-label").innerHTML = formatTime(
+            timeLeft
+        );
+        setCircleDasharray();
+        setRemainingPathColor(timeLeft);
+
+        if (timeLeft === 0) {
+            onTimesUp();
+        }
+    }, 1000);
+}
