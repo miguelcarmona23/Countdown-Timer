@@ -14,3 +14,8 @@ body {
 .base-timer__svg {
     transform: scaleX(-1);
 }
+
+.base-timer__circle {
+    fill: none;
+    stroke: none;
+}
