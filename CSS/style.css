@@ -19,3 +19,8 @@ body {
     fill: none;
     stroke: none;
 }
+
+.base-timer__path-elapsed {
+    stroke-width: 7px;
+    stroke: grey;
+}
