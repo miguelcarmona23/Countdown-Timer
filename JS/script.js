@@ -47,3 +47,7 @@ document.getElementById("app").innerHTML = `
 `;
 
 startTimer();
+
+function onTimesUp() {
+    clearInterval(timerInterval);
+}
