@@ -56,15 +56,9 @@ function startTimer() {
     timerInterval = setInterval(() => {
         timePassed = timePassed += 1;
         timeLeft = TIME_LIMIT - timePassed;
-        document.getElementById("base-timer-label").innerHTML = formatTime(
-            timeLeft
-        );
-        setCircleDasharray();
-        setRemainingPathColor(timeLeft);
+        document.getElementById("base-timer-label").innerHTML = formatTime(timeLeft);
 
-        if (timeLeft === 0) {
-            onTimesUp();
-        }
+        setCircleDasharray();
     }, 1000);
 }
 
